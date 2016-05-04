@@ -19,5 +19,6 @@ I don't think that firefox extensions are neccessary either. I plan on just chan
 
 ### External Resources
 [Guide for optimizing speed caps](https://torrentfreak.com/optimize-your-bittorrent-download-speed/)
+[Default rtorrent.rc config file from official repo](https://github.com/rakshasa/rtorrent/blob/master/doc/rtorrent.rc)
 
 
