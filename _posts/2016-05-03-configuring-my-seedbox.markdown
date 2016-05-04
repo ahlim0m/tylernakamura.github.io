@@ -12,6 +12,8 @@ I think that other guides are lackluster and dated. [This guide](https://harbhag
 
 I don't think that firefox extensions are neccessary either. I plan on changing the way Firefox handles magnet links with a link to a simple script that utilizes wget and ssh. This script just needs to ensure the that the VPS rTorrent gets a hold of the magnet link. The rest is history.
 
+I chose to go with a VPS from [Dediseedbox.com](http://dediseedbox.com/). The fact that they are built towards seeding made me choose them as my provider. I also like d that the servers are located outside of the US. 
+
 ### Goals
 - One click push magnet to VPS seedbox
 - Automatic server side load balancing
