@@ -6,19 +6,19 @@ comments: false
 categories: seedbox vps
 ---
 
-This post will be a diary of my efforts in the configuration of my offshore seedbox. Ease of use and scalability are my primary goals for this project.
+This post will act as a diary of my efforts in the configuration of my off-shore seedbox. Ease of use and scalability are my primary goals for this project.
 
-I think that other guides are lackluster and dated. [This Guide](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/) for example fails to allow for optimized up and down speeds.
+I think that other guides are lackluster and dated. [This guide](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/) for example, fails to explain why the up and down speeds are set the way they are. 
 
-I don't think that firefox extensions are neccessary either. I plan on just changing the way that the Firefox Browser handles magnet links with a link to a simple script using wget and ssh. All it really has to do is ensure the that VPS rTorrent gets a hold of the magnet link. The rest is history.
+I don't think that firefox extensions are neccessary either. I plan on changing the way Firefox handles magnet links with a link to a simple script that utilizes wget and ssh. This script just needs to ensure the that the VPS rTorrent gets a hold of the magnet link. The rest is history.
 
 ### Goals
-- One click push to VPS seedbox
+- One click push magnet to VPS seedbox
 - Automatic server side load balancing
-- Email alerts about the bandwidth caps and other related KPIs
+- Email alerts about bandwidth caps and other KPIs
 
 ### External Resources
-[Guide for optimizing speed caps](https://torrentfreak.com/optimize-your-bittorrent-download-speed/)
-[Default rtorrent.rc config file from official repo](https://github.com/rakshasa/rtorrent/blob/master/doc/rtorrent.rc)
+- [Guide for optimizing speed caps](https://torrentfreak.com/optimize-your-bittorrent-download-speed/)
+- [Default rtorrent.rc config file from official repo](https://github.com/rakshasa/rtorrent/blob/master/doc/rtorrent.rc)
 
 
