@@ -10,8 +10,6 @@ categories: seedbox vps
 
 This page will act as a diary of my efforts in the configuration of my off-shore seedbox. Ease of use, automation and scalability are my primary goals for this project.
 
-I think that other guides are lackluster and dated. [This guide](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/) for example, fails to explain why the up and down speeds are set the way they are. 
-
 I don't think that firefox extensions are neccessary either. I plan on changing the way Firefox handles magnet links with a link to a simple script that utilizes wget and ssh. This script just needs to ensure the that the VPS rTorrent gets a hold of the magnet link. The rest is history. Keep it simple, stupid.
 
 ### Select a VPS service
@@ -51,6 +49,8 @@ To grab the config file from the command line:
 wget https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc
 ```
 
+I found a lot of the following information [from this blog post](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/).
+
 ## Goals
 - One click push magnet to VPS seedbox from Mozilla Firefox
 - Automatic server load balancing, no task should consume resources that other higher priority tasks need
@@ -61,5 +61,6 @@ wget https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc
 - [Default rtorrent.rc config file from official repo](https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc)
 - [Digital Ocean - How to Set up SSH Keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 - [Digital Ocean - Bash Alias Tut](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions)
+- [Download Magnet Links with rTorrent From Command Line](http://snarvaez.com.ar/libertad/index.php/2013/05/10/download-magnet-links-with-rtorrent-from-command-line/)
 
 
