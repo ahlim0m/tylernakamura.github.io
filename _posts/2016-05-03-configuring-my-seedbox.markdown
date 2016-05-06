@@ -51,6 +51,39 @@ wget https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc
 
 I found a lot of the following information [from this blog post](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/).
 
+### Running rTorrent in the Background
+In order for rTorrent to continue seeding, it has to continue running. Unfortunately calling **rtorrent &** will not work.
+
+I looked at [this solution on a forum](http://www.linuxquestions.org/questions/linux-general-1/problem-using-screen-cannot-open-your-terminal-'-dev-pts-0'-please-check-338313/). And found that running the following commands will allow you to run rTorrent in the background:
+
+```bash
+sudo screen rtorrent
+```
+
+Then press ctr+a, then ctrl+d to detach from the screen.
+
+### Converting magnet links to .torrent files
+
+In 2012, The Pirate Bay no longer offered .torrent files but magnet links instead. This decision provided another layer of abstraction in the hope that it would mitigate some of the litigious efforts to banish The Pirate Bay.
+As a user, all you really have to know is that a magnet link stores meta data about a torrent file, it requires some minor conversion in order to retrieve the .torrent file that you need.
+There are sites that allow you to do this from a browser:
+
+<a src="http://torrent-to-magnet.com/"><img src="/images/torrent-magnet-site-screenshot.png"></a>
+
+However, for what we are looking to requires conversion from the command line. I found this nifty script online that has worked for me:
+
+```bash
+#!/bin/bash
+## usage: ./download_magnet_url.sh "magnet_link"
+## magnet link shoul be enclosed in quotes.
+
+cd ./watch # set your watch directory here
+[[ "$1" =~ xt=urn:btih:([^&/]+) ]] || exit;
+echo "d10:magnet-uri${#1}:${1}e" > "meta-${BASH_REMATCH[1]}.torrent"
+```
+
+[Source of script](http://snarvaez.com.ar/libertad/index.php/2013/05/10/download-magnet-links-with-rtorrent-from-command-line/)
+
 ## Goals
 - One click push magnet to VPS seedbox from Mozilla Firefox
 - Automatic server load balancing, no task should consume resources that other higher priority tasks need
