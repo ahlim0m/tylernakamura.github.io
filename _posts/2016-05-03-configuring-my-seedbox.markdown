@@ -52,7 +52,7 @@ wget https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc
 I found a lot of the following information [from this blog post](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/).
 
 ### Running rTorrent in the Background
-In order for rTorrent to continue seeding, it has to continue running. Unfortunately calling **rtorrent &** will not work.
+In order for rTorrent to continue seeding, it has to continue running. I have found that calling **rtorrent &** doesn't really work as expected.
 
 I looked at [this solution on a forum](http://www.linuxquestions.org/questions/linux-general-1/problem-using-screen-cannot-open-your-terminal-'-dev-pts-0'-please-check-338313/). And found that running the following commands will allow you to run rTorrent in the background:
 
@@ -61,6 +61,8 @@ sudo screen rtorrent
 ```
 
 Then press ctr+a, then ctrl+d to detach from the screen.
+
+Be mindful of the PID, in order to kill the process if you need to later.
 
 ### Converting magnet links to .torrent files
 
@@ -74,22 +76,36 @@ However, for what we are looking to requires conversion from the command line. I
 
 ```bash
 #!/bin/bash
-## usage: ./download_magnet_url.sh "magnet_link"
-## magnet link shoul be enclosed in quotes.
 
 cd ./watch # set your watch directory here
 [[ "$1" =~ xt=urn:btih:([^&/]+) ]] || exit;
 echo "d10:magnet-uri${#1}:${1}e" > "meta-${BASH_REMATCH[1]}.torrent"
 ```
 
+I tried long and hard to configure Firefox in a way that would just handle magnet links with a script, but I could not figure it out. If you can figure out a way for Firefox to handle magnet links with a script, let me know. For now, this is what I am doing for the time being.
+
+```bash
+./script "magnet link here"
+```
+
+My personal script utilizes the script I found online with the SSH addition:
+
+```bash
+#!/bin/bash
+
+cd ./watch # set your watch directory here
+[[ "$1" =~ xt=urn:btih:([^&/]+) ]] || exit;
+echo "d10:magnet-uri${#1}:${1}e" > "meta-${BASH_REMATCH[1]}.torrent"
+
+ssh user@remote_host:/path/to/rtorrent-watch-file
+```
+
+
+
+
 [Source of script](http://snarvaez.com.ar/libertad/index.php/2013/05/10/download-magnet-links-with-rtorrent-from-command-line/)
 
-## Goals
-- One click push magnet to VPS seedbox from Mozilla Firefox
-- Automatic server load balancing, no task should consume resources that other higher priority tasks need
-- Email alerts about bandwidth caps and other KPIs
-
-## External Resources
+## Other Resources
 - [Guide for Optimizing Torrent Speed](https://torrentfreak.com/optimize-your-bittorrent-download-speed/)
 - [Default rtorrent.rc config file from official repo](https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc)
 - [Digital Ocean - How to Set up SSH Keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
