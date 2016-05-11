@@ -87,7 +87,6 @@ Note that the magnet link in this scripts usage needs to be surrounded by quotat
 
 ## More Resources
 - [Guide for Optimizing Torrent Speed](https://torrentfreak.com/optimize-your-bittorrent-download-speed/)
-- [Default rtorrent.rc config file from official repo](https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc)
 - [Digital Ocean - How to Set up SSH Keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 - [Digital Ocean - Bash Alias Tut](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions)
 - [Download Magnet Links with rTorrent From Command Line](http://snarvaez.com.ar/libertad/index.php/2013/05/10/download-magnet-links-with-rtorrent-from-command-line/)
