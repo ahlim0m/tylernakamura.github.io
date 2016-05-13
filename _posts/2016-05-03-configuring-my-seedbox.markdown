@@ -3,14 +3,14 @@ layout: post
 title: My Seedbox Configuration and Guide
 date: 2016-05-03 12:41
 comments: false
-categories: seedbox vps
+categories: seedbox vps rtorrent screen
 ---
 Below is a guide and a tale of my efforts in creating an autonomous seedbox:
 
 ### Selecting a Virtual Private Server
 I chose to go with a VPS from [Dediseedbox.com](http://dediseedbox.com/). The fact that they are built towards seeding made me choose them as my provider. Compare [their rates](http://dediseedbox.com/vps.html) to another popular provider like [Digital Ocean](https://www.digitalocean.com/pricing/). Having servers located outside of the US can also be advantageous for a variety of other reasons.
 
-I was pretty satisfied with the internet speeds upon my purchase, especially considering for non-US location. For me, the speeds exceed sufficiency.
+I was pretty satisfied with the speeds, especially considering the location. For myself, the speeds exceed sufficiency.
 
 <img src="/images/speedtests.png"/>
 
@@ -44,17 +44,25 @@ wget https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc
 
 I found a lot of the following information [from this blog post to be useful for configuring rTorrent](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/).
 
-### Running rTorrent in the Background
-I found that calling **rtorrent &** doesn't really work as I had hoped.
-Finding [this solution on a forum](http://www.linuxquestions.org/questions/linux-general-1/problem-using-screen-cannot-open-your-terminal-'-dev-pts-0'-please-check-338313/) will describe how to run rTorrent in the background. Running the following commands will allow you to run rTorrent in the background:
+### Running rTorrent in the Background with Screen
+ [I found this solution on a forum](http://www.linuxquestions.org/questions/linux-general-1/problem-using-screen-cannot-open-your-terminal-'-dev-pts-0'-please-check-338313/) that describes how to run rTorrent in the background.
+ Opening rTorrent via **screen** will allow you to detach and reattach from a running screen:
 
 ```bash
 sudo screen rtorrent
 ```
 
-Then press ctr+a, then ctrl+d to detach from the screen.
+Pressing ctr+a, then ctrl+d will detach from the screen while leaving the process running.
 
-Be mindful of the PID, in order to kill the process should you ever need to.
+To list all of the screens for a user, run the following command as that user[(source)](http://stackoverflow.com/questions/537942/how-to-list-running-screen-sessions):
+```bash
+screen -ls
+```
+
+To reattach to a screen:
+```bash
+screen -r
+```
 
 ### Converting Magnet Links to .torrent Files
 [In 2012, The Pirate Bay no longer offered torrent files but magnet links instead](http://www.webcitation.org/6BWzbw7JF). This decision provided another layer of abstraction in the hope that it would mitigate some of the litigious efforts to banish The Pirate Bay.
@@ -80,12 +88,12 @@ scp "meta-${BASH_REMATCH[1]}.torrent" user@remote_host:/path/to/rtorrent-watch-f
 The script usage looks like this:
 
 ```bash
-/script "magnet link here"
+./script "magnet link here"
 ```
 
-Note that the magnet link in this scripts usage needs to be surrounded by quotation marks.
+Note that the magnet link in needs to be enclosed by quotation marks.
 
-## More Resources
+## Some Resources
 - [Guide for Optimizing Torrent Speed](https://torrentfreak.com/optimize-your-bittorrent-download-speed/)
 - [Digital Ocean - How to Set up SSH Keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 - [Digital Ocean - Bash Alias Tut](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions)
