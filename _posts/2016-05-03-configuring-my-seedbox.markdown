@@ -64,7 +64,8 @@ There are sites that allow you to do this conversion from a browser:
 
 <a src="http://torrent-to-magnet.com/"><img src="/images/torrent-magnet-site-screenshot.png"></a>
 
-However, I need magnet conversion from the command line, I [found a nifty script](http://snarvaez.com.ar/libertad/index.php/2013/05/10/download-magnet-links-with-rtorrent-from-command-line/) that helped me create this:
+However, I need magnet conversion from the command line, I [found a nifty script](http://snarvaez.com.ar/libertad/index.php/2013/05/10/download-magnet-links-with-rtorrent-from-command-line/) that helped me create this.
+The below script will convert a magnet link to a .torrent and copy it to a remote host.
 
 ```bash
 #!/bin/bash
@@ -72,9 +73,8 @@ However, I need magnet conversion from the command line, I [found a nifty script
 [[ "$1" =~ xt=urn:btih:([^&/]+) ]] || exit;
 echo "d10:magnet-uri${#1}:${1}e" > "meta-${BASH_REMATCH[1]}.torrent"
 
-scp "$1.torrent" user@remote_host:/path/to/rtorrent-watch-file
+scp "meta-${BASH_REMATCH[1]}.torrent" user@remote_host:/path/to/rtorrent-watch-file
 
-rm $1.torrent
 ```
 
 The script usage looks like this:
