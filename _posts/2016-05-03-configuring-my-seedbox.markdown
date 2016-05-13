@@ -55,11 +55,13 @@ sudo screen rtorrent
 Pressing ctr+a, then ctrl+d will detach from the screen while leaving the process running.
 
 To list all of the screens for a user, run the following command as that user[(source)](http://stackoverflow.com/questions/537942/how-to-list-running-screen-sessions):
+
 ```bash
 screen -ls
 ```
 
 To reattach to a screen:
+
 ```bash
 screen -r
 ```
