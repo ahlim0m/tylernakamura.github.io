@@ -76,6 +76,7 @@ There are sites that allow you to do this conversion from a browser:
 
 However, I need magnet conversion from the command line, I [found a nifty script](http://snarvaez.com.ar/libertad/index.php/2013/05/10/download-magnet-links-with-rtorrent-from-command-line/) that helped me create this.
 The below script will convert a magnet link to a .torrent and copy it to a remote host.
+Be sure to change the target directories in the scp function to your personal information.
 
 ```bash
 #!/bin/bash
@@ -83,7 +84,7 @@ The below script will convert a magnet link to a .torrent and copy it to a remot
 [[ "$1" =~ xt=urn:btih:([^&/]+) ]] || exit;
 echo "d10:magnet-uri${#1}:${1}e" > "meta-${BASH_REMATCH[1]}.torrent"
 
-scp "meta-${BASH_REMATCH[1]}.torrent" user@remote_host:/path/to/rtorrent-watch-file
+scp "meta-${BASH_REMATCH[1]}.torrent" user@remote_host:/path/to/rtorrent-watch-directory
 
 ```
 
