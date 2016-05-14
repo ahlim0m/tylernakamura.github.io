@@ -7,14 +7,14 @@ categories: seedbox vps rtorrent screen
 ---
 Below is a guide and a tale of my efforts in creating an autonomous seedbox:
 
-### Selecting a Virtual Private Server
+### Selecting a Virtual Private Server Service
 I chose to go with a VPS from [Dediseedbox.com](http://dediseedbox.com/). The fact that they are built towards seeding made me choose them as my provider. Compare [their rates](http://dediseedbox.com/vps.html) to another popular provider like [Digital Ocean](https://www.digitalocean.com/pricing/). Having servers located outside of the US can also be advantageous for a variety of other reasons.
 
 I was pretty satisfied with the speeds, especially considering the location. For myself, the speeds exceed sufficiency.
 
 <img src="/images/speedtests.png"/>
 
-### Set up SSH Keys
+### Setting up SSH Keys
 SSH keys can allow a client to SSH into a VPS without the use of a password. When configuring a VPS, you may need to log into your server often. Setting up keys can help speed up this process. SSH keys can also enhance security if you choose to still use a password. For more information, [Digital Ocean has an excellent basic guide for setting up SSH keys.](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 
 For maximum laziness and brownie points, set up a bash alias that allows you to type in a word to SSH into your VPS. For example, when I type:
@@ -27,7 +27,7 @@ my bash alias automatically logs me into the VPS; all done securely without the 
 
 For more info on bash aliases, [see here](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions).
 
-### Configure rTorrent
+### Configuring rTorrent
 "rTorrent is a text-based ncurses BitTorrent client written in C++, based on the libTorrent libraries for Unix, whose author's goal is a focus on high performance and good code." ~[source](https://en.wikipedia.org/wiki/RTorrent)
 
 I have made rTorrent my client of choice as it functions via the CLI.
@@ -43,6 +43,37 @@ wget https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc
 ```
 
 I found a lot of the following information [from this blog post to be useful for configuring rTorrent](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/).
+
+Save the downloaded config file in the home directory of the user that will be running rtorrent.
+
+Many of the settings aren't required for basic rtorrent usage, but here are the ones that I found essential.
+
+Changing the directory variable will specify where downloaded file will be placed:
+
+```bash
+# Default directory to save the downloaded torrents.
+directory = /home/user/path/to/folder
+```
+
+Specifying a session directory will allow rtorrent to save sessions:
+
+```bash
+# Default session directory. Make sure you don't run multiple instance
+# of rtorrent using the same session directory. Perhaps using a
+# relative path?
+session = /home/user/path/to/folder
+```
+
+Perhaps the most important of the settings for automation, a watch directory will be monitored for .torrent files.
+When a .torrent file is found in this directory, rtorrent (only if running) will take care of the rest and place the respective files in the sessions folder and/or the downloads folder.
+
+```bash
+# Watch a directory for new torrents, and stop those that have been deleted
+schedule = watch_directory,5,5,load.start=/home/user/path/to/watch/directory
+schedule = untied_directory,5,5,stop_untied=
+```
+
+There are many other options for customization, be sure to check out the Arch Wiki (see above) if you feel you need more than just these settings.
 
 ### Running rTorrent in the Background with Screen
  [I found this solution on a forum](http://www.linuxquestions.org/questions/linux-general-1/problem-using-screen-cannot-open-your-terminal-'-dev-pts-0'-please-check-338313/) that describes how to run rTorrent in the background.
@@ -81,11 +112,15 @@ Be sure to change the target directories in the scp function to your personal in
 ```bash
 #!/bin/bash
 
+# converts the magnet link into a .torrent file in the current directory
 [[ "$1" =~ xt=urn:btih:([^&/]+) ]] || exit;
 echo "d10:magnet-uri${#1}:${1}e" > "meta-${BASH_REMATCH[1]}.torrent"
 
+# securely copies the torrent file to your remote server, be sure to change path
 scp "meta-${BASH_REMATCH[1]}.torrent" user@remote_host:/path/to/rtorrent-watch-directory
 
+# if you don't want to keep the .torrent file just call rm on it
+#rm "meta-${BASH_REMATCH[1]}.torrent"
 ```
 
 The script usage looks like this:
