@@ -5,7 +5,7 @@ date: 2016-05-03 12:41
 comments: false
 categories: seedbox vps rtorrent screen
 ---
-Below is a guide and a tale of my efforts in creating an autonomous seedbox:
+Below is a guide and a tale of my efforts in creating an almost completely autonomous seedbox:
 
 ### Selecting a Virtual Private Server Service
 I chose to go with a VPS from [Dediseedbox.com](http://dediseedbox.com/). The fact that they are built towards seeding made me choose them as my provider. Compare [their rates](http://dediseedbox.com/vps.html) to another popular provider like [Digital Ocean](https://www.digitalocean.com/pricing/). Having servers located outside of the US can also be advantageous for a variety of other reasons.
@@ -15,9 +15,13 @@ I was pretty satisfied with the speeds, especially considering the location. For
 <img src="/images/speedtests.png"/>
 
 ### Setting up SSH Keys
-SSH keys can allow a client to SSH into a VPS without the use of a password. When configuring a VPS, you may need to log into your server often. Setting up keys can help speed up this process. SSH keys can also enhance security if you choose to still use a password. For more information, [Digital Ocean has an excellent basic guide for setting up SSH keys.](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
+SSH keys can allow a client to SSH into a VPS without the use of a password. When configuring a VPS, you may need to log into your server often.
+Setting up keys can help speed up this process. SSH keys can also enhance security if you choose to still use a password.
+SSH keys aren't required but can be very convenient.
+For more information, [Digital Ocean has an excellent basic guide for setting up SSH keys.](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 
-For maximum laziness and brownie points, set up a bash alias that allows you to type in a word to SSH into your VPS. For example, when I type:
+For maximum laziness and brownie points, set up a bash alias that allows you to type in a word to SSH into your VPS.
+For example, when I type:
 
 ```bash
 go-to-holland
@@ -28,25 +32,20 @@ my bash alias automatically logs me into the VPS; all done securely without the 
 For more info on bash aliases, [see here](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions).
 
 ### Configuring rTorrent
-"rTorrent is a text-based ncurses BitTorrent client written in C++, based on the libTorrent libraries for Unix, whose author's goal is a focus on high performance and good code." ~[source](https://en.wikipedia.org/wiki/RTorrent)
+"rTorrent is a text-based ncurses BitTorrent client written in C++, based on the libTorrent libraries for Unix, whose author's goal is a focus on high performance and good code." [(source)](https://en.wikipedia.org/wiki/RTorrent).
+I have made rTorrent my BitTorrent client of choice as it functions via the CLI.
 
-I have made rTorrent my client of choice as it functions via the CLI.
+Much of the documentation that you need in configuring rTorrent can be found at the [Arch Linux wiki](https://wiki.archlinux.org/index.php/RTorrent).
+However, this segment will mostly pertain to what I consider to be the essentials in my rTorrent configuration.
 
-Much of the documentation that you need in configuring rTorrent can be found at the [Arch Linux wiki](https://wiki.archlinux.org/index.php/RTorrent). However, this segment will mostly pertain to what I consider to be the essentials in my rTorrent configuration.
-
-My apt-get installation for didn't seem to include a copy of the **rtorrent.rc** config file (or at least I couldn't find it) so I have included a link at the bottom of this page to the official config file from the projects repo.
-
-To download the config file from the command line:
+My apt-get installation for didn't seem to include a copy of the **rtorrent.rc** config file (or at least I couldn't find it). To download the rTorrent config file from the command line:
 
 ```bash
 wget https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc
 ```
+Save the downloaded config file in the home directory of the user that will be running rTorrent.
 
-I found a lot of the following information [from this blog post to be useful for configuring rTorrent](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/).
-
-Save the downloaded config file in the home directory of the user that will be running rtorrent.
-
-Many of the settings aren't required for basic rtorrent usage, but here are the ones that I found essential.
+Many of the settings aren't required for basic rTorrent usage, but here are the ones that I found essential:
 
 Changing the directory variable will specify where downloaded file will be placed:
 
@@ -64,8 +63,8 @@ Specifying a session directory will allow rtorrent to save sessions:
 session = /home/user/path/to/folder
 ```
 
-Perhaps the most important of the settings for automation, a watch directory will be monitored for .torrent files.
-When a .torrent file is found in this directory, rtorrent (only if running) will take care of the rest and place the respective files in the sessions folder and/or the downloads folder.
+Perhaps the most important setting for automation, a watch directory that will be monitored for .torrent files.
+When a .torrent file is found in this directory, rtorrent (if running) will take care of the rest and place the respective files in the sessions folder and the downloads folder.
 
 ```bash
 # Watch a directory for new torrents, and stop those that have been deleted
@@ -73,14 +72,14 @@ schedule = watch_directory,5,5,load.start=/home/user/path/to/watch/directory
 schedule = untied_directory,5,5,stop_untied=
 ```
 
-There are many other options for customization, be sure to check out the Arch Wiki (see above) if you feel you need more than just these settings.
+There are many other options for customization, be sure to check out the Arch Wiki or [this blog post](https://harbhag.wordpress.com/2010/06/30/tutorial-using-rtorrent-on-linux-like-a-pro/) for more information about rTorrent config.
 
 ### Running rTorrent in the Background with Screen
  [I found this solution on a forum](http://www.linuxquestions.org/questions/linux-general-1/problem-using-screen-cannot-open-your-terminal-'-dev-pts-0'-please-check-338313/) that describes how to run rTorrent in the background.
  Opening rTorrent via **screen** will allow you to detach and reattach from a running screen:
 
 ```bash
-sudo screen rtorrent
+screen rtorrent
 ```
 
 Pressing ctr+a, then ctrl+d will detach from the screen while leaving the process running.
@@ -129,9 +128,9 @@ The script usage looks like this:
 ./script "magnet link here"
 ```
 
-Note that the magnet link in needs to be enclosed by quotation marks.
+Note that the magnet link needs to be enclosed by quotation marks.
 
-## Some Resources
+## More Resources
 - [Guide for Optimizing Torrent Speed](https://torrentfreak.com/optimize-your-bittorrent-download-speed/)
 - [Digital Ocean - How to Set up SSH Keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 - [Digital Ocean - Bash Alias Tut](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions)
