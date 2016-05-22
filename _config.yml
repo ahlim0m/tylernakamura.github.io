@@ -15,4 +15,5 @@ url: "tylernakamura.com" # the base hostname & protocol for your site
 github_username:  tylernakamura
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+extensions: [fenced_code_blocks]

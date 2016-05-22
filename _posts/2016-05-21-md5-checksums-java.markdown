@@ -10,7 +10,7 @@ Credit goes to [Stack Overflow post](http://stackoverflow.com/a/304275/4143925).
 It is a lengthy solution for a seemingly simple task.
 This is the nature of Java I suppose.
 
-```Java
+```java
 import java.io.*;
 import java.security.MessageDigest;
 
