@@ -6,9 +6,9 @@ comments: false
 categories: Jekyll sym link _posts posts
 ---
 
-Often when creating a new Jekyll post, I often need to cd into the _posts folder. 
-Jekyll, preceded all directory names with an '_'
-For example, note that the contents of this jekyll site are often preceded with an underscore.
+When creating a new Jekyll post, I often need to cd into the _posts folder. 
+You will notice that a Jekyll project precedes names with an '_'
+For example, note that the contents of this simple Jekyll site:
 
 ```bash
 .
