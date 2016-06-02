@@ -16,9 +16,9 @@ This post was inspired by this [Stack Overflow](http://stackoverflow.com/questio
 When configuring your ssh keys and the intial set up of git on your local machine, you probably were instructed to enter the following commands:
 
 ```bash
-git config --global user.name = "Bob Alison"
-git config --global user.email= "person@example.com"
-git config --global core.editor= vim
+git config --global user.name  "Bob Alison"
+git config --global user.email "person@example.com"
+git config --global core.editor vim
 ```
 
 In doing so, you are setting a default username and an email for anything related to git on the local machine.
