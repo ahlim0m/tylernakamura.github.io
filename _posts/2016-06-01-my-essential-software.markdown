@@ -14,11 +14,13 @@ The list I use to bring a new machine up to my dev environment
 ### Desktop Apps
 - Spotify
 - Anki
+- Mail Client
 - Firefox
 - Virtual Box
 - iTerm2
 - vlc
 - Slack
+- Libreoffice
 
 ### CLI
 - tldr
