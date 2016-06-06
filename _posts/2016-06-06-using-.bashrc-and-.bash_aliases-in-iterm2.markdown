@@ -1,0 +1,19 @@
+---
+layout: post
+title: "using .bashrc and .bash_aliases in iTerm2"
+date: 2016-06-06 13:45
+comments: true
+categories: Iterm2 .bashrc .bash_aliases .profile source export
+---
+
+When loading a new terminal in iTerm (perhaps all mac), the .bashrc and .bash_aliases are not sourced by default. Instead, a .profile is sourced from your home directory.
+
+To load your .bash_aliases and .bashrc file, in your .profile simply add:
+
+```bash
+source /path/to/.bashrc
+source /path/to/.bash_aliases
+```
+
+A simple fix that I couldn't find elsewhere on the internet.
+
