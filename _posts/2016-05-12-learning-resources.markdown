@@ -14,3 +14,6 @@ This page will act as a repository for all of my personal learning resources.
 
 ## Linux
 [Linux Journey - A site for learning about Linux](https://linuxjourney.com/)
+
+## Openstack
+[Introduction to Openstack (Youtube Video) Next Day Video - Sandy Walsh](https://www.youtube.com/watch?v=bCsw2kkIWyw)
