@@ -22,8 +22,10 @@ The list I use to bring a new machine up to my dev environment
 - Slack
 - Libreoffice
 - Dash (Mac) - Offline Documentation
+- Virtual Box
 
 ### CLI
+- vagrant
 - tldr
 - pip
 - git

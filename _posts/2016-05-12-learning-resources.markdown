@@ -17,3 +17,16 @@ This page will act as a repository for all of my personal learning resources.
 
 ## Openstack
 [Introduction to Openstack (Youtube Video) Next Day Video - Sandy Walsh](https://www.youtube.com/watch?v=bCsw2kkIWyw)
+[A Beginners Guide to Learning Openstack](https://opensource.com/business/14/2/openstack-beginners-guide)
+
+## Rally
+[Official Documentation](http://rally.readthedocs.io/en/latest/tutorial/step_5_task_templates.html)
+[Youtube - Verifying your openstack cloud with tempest and cloud - openstack foundation - talk](https://www.youtube.com/watch?v=B6S3RFjzMWk)
+
+## Networking
+[How ipv4 subnetting works - serverfault.com](http://serverfault.com/questions/49765/how-does-ipv4-subnetting-work)
+
+## Vagrant
+[Vagrant Beginner JREAM](https://www.youtube.com/watch?v=ZGUEjZckijA)
+
+
