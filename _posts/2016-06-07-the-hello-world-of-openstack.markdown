@@ -210,7 +210,7 @@ ie:
 openstack server remove security group my-ssh-server default-security-group
 ```
 
-###Summary
+### Summary
 At this point you have a disposable Linux VM running an OpenStack based server.
 Due to the nature of the OpenStack CLI, automating the process of deploying instances is easy.
 The possibilities are endless!
