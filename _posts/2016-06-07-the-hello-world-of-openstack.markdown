@@ -3,15 +3,14 @@ layout: post
 title: "The Hello World of OpenStack"
 date: 2016-06-07 09:30
 comments: false
-categories: Openstack beginner basic tutorial guide tut
+categories: Openstack beginner basic tutorial guide tut vagrant devstack trusty64
 ---
-
-**Note: This post is currently unfinished...**
 
 This post outlines the steps required to start an OpenStack Environment using an Ubuntu VM then deploy a server within OpenStack.
 The process below will be executed from a Mac OS based machine, but the steps should be highly similar for any other host OS.
 
 **Tools Used:**
+
 - [Vagrant](https://www.vagrantup.com/)
 - [Devstack](https://github.com/openstack-dev/devstack)
 - [OpenStack](https://github.com/openstack/openstack)
@@ -23,7 +22,7 @@ DevStack recommends for good reason, recommends using a VM to stand up an OpenSt
 
 ```
  We strongly recommend that you run stack.sh in a clean and disposable vm when you are first getting started.
- ```
+```
 [-source](https://github.com/openstack-dev/devstack)
 
 Use the [installation guide for Vagrant](https://www.vagrantup.com/docs/installation/) for your machine, then follow the [getting started guide ](https://www.vagrantup.com/docs/getting-started/index.html) to get a VM running.
@@ -82,6 +81,7 @@ cd devstack
 ```
 
 Per the documentation, here are the steps required to stand up OpenStack using DevStack:
+
 ```bash
 . openrc
 ./stack
