@@ -18,7 +18,7 @@ The process below will be executed from a Mac OS based machine, but the steps sh
 - [Git](https://git-scm.com/)
 
 ### Using Vagrant to create a clean development environment
-DevStack recommends for good reason, recommends using a VM to stand up an OpenStack development environment:
+DevStack recommends for good reason, using a VM to stand up an OpenStack development environment:
 
 ```
  We strongly recommend that you run stack.sh in a clean and disposable vm when you are first getting started.
@@ -31,6 +31,7 @@ Note that Vagrant requires Virtual Box in order to run as it essentially wraps t
 
 I used Ubuntu Trusty64 as my OS, DevStack at this is time is being developed for Ubuntu or Fedora.
 There were definitely issues with Ubuntu 12.x and DevStack, so I would recommend using 14.x.
+Also note that OpenStack requires a 64bit OS.
 
 Here are the steps after a Vagrant Installation:
 
@@ -69,11 +70,11 @@ At this point, you can ssh into the machine:
 vagrant ssh
 ```
 
-Congratulations, you now have a nice "clean and disposable vm" for your OpenStack!
+You now have a nice "clean and disposable vm" for your OpenStack!
 
 Next, we want to install OpenStack using DevStack.
 DevStack, is really just a series of scripts that assists in deploying OpenStack.
-At this point, lets clone the DevStack repository in our Ubuntu VM:
+At this point, let's clone the DevStack repository in our Ubuntu VM:
 
 ```bash
 git clone https://github.com/openstack-dev/devstack
@@ -208,3 +209,9 @@ ie:
 ```bash
 openstack server remove security group my-ssh-server default-security-group
 ```
+
+###Summary
+At this point you have a disposable Linux VM running an OpenStack based server.
+Due to the nature of the OpenStack CLI, automating the process of deploying instances is easy.
+The possibilities are endless!
+Happy clouding.
