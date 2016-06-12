@@ -46,7 +46,7 @@ vagrant up --provider virtualbox
 ```
 
 I learned the hard way that OpenStack needs more memory than what VirtualBox gave it at creation.
-Use the API to give it more memory:
+Use the VirtualBox API to give it more memory:
 
 ```bash
 VBoxManage modifyvm <name-of-vm> --memory <amount of memory in mb>
@@ -72,11 +72,14 @@ vagrant ssh
 
 You now have a nice "clean and disposable vm" for your OpenStack!
 
+### Installing OpenStack
+
 Next, we want to install OpenStack using DevStack.
 DevStack, is really just a series of scripts that assists in deploying OpenStack.
-At this point, let's clone the DevStack repository in our Ubuntu VM:
+At this point, ssh into your newly created VM and clone the DevStack repository:
 
 ```bash
+vagrant ssh
 git clone https://github.com/openstack-dev/devstack
 cd devstack
 ```
@@ -92,7 +95,7 @@ If something goes awry during the stack process, be sure to ```./unstack.sh``` b
 
 At this point, OpenStack should now be running, the following steps should be focused on deploying an instance.
 
-### Creating an Image
+### Creating an Image in OpenStack
 
 Before we can create a server, we have to create an image based on an ISO.
 My OpenStack deployment came with an CirrOS image already installed.
@@ -103,7 +106,7 @@ My favorite feature about Vagrant is how easily you can move files into your VM.
 To move an ISO into your VM (even while it is running), simply move the file on your host machine into the directory of your vagrant environment:
 
 ```bash
-mv /path/to/dankfile.awesome /path/to/mv-vagrant-env
+mv /path/to/dankfile.awesome /path/to/my-vagrant-env
 ```
 
 With this, ```dankfile.awesome``` now exists within the vm at ```/vagrant/```.
@@ -119,7 +122,7 @@ ie:
 openstack image create --file /vagrant/ubuntu-16.04-server-amd64.iso ubuntu-server-image
 ```
 
-### Creating a Server
+### Creating a Server in OpenStack
 **Create a server from an image:**
 
 ```bash
@@ -143,7 +146,7 @@ If the creation was successful, the server will show in the server list:
 openstack server list
 ```
 
-### Security Groups
+### Security Groups in OpenStack
 We are now looking to make our newly made server accessible via ssh and/or ping.
 The default security group assigned to this server, is sometimes not allowed access to ssh and/or ping.
 This sections aims to first create a new security group, create rules that allow for ping and ssh:
