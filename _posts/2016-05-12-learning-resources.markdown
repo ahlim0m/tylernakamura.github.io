@@ -29,4 +29,7 @@ This page will act as a repository for all of my personal learning resources.
 ## Vagrant
 [Vagrant Beginner JREAM](https://www.youtube.com/watch?v=ZGUEjZckijA)
 
+## Python
+[Python Entry Points - Chris Warrick](https://www.chriswarrick.com/blog/2014/09/15/python-apps-the-right-way-entry_points-and-scripts/_
+
 

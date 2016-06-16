@@ -23,6 +23,7 @@ The list I use to bring a new machine up to my dev environment
 - Libreoffice
 - Dash (Mac) - Offline Documentation
 - Virtual Box
+- Textual (IRC)
 
 ### CLI
 - vagrant
