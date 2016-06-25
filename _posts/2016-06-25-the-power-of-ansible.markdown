@@ -6,7 +6,10 @@ comments: false
 categories: Ansible orchestration devops
 ---
 
-Imagine you own more than 10 servers. 
+<img src="/images/ansible-logo-transparent-background.png"/>
+
+
+Imagine you manage more than 10 servers. 
 Some of your computers are purposed as databases, others are compute nodes and others are web servers.
 Now trying to envision managing such a cluster.
 Without other tools, in order to roll out changes or add in additional machines it would require a great deal of manual configuration.
@@ -33,9 +36,6 @@ db2.pup.com
 192.168.1.[45-100]
 
 ```
-
-<img src="/images/ansible-logo-transparent-background.png"/>
-
 Now that you have all of your machines organized in such a way, rolling out targeted changes is easier than ever.
 
 Ansible also features what are called "playbooks."
