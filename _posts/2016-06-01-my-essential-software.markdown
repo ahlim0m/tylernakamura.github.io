@@ -35,14 +35,14 @@ The list I use to bring a new machine up to my dev environment
 - npm
 - python
 - Java
+- geoip-bin
 
 ### Firefox Extensions
-- [url alias (firefox extension)](https://addons.mozilla.org/en-US/firefox/addon/url-alias-8703/)
-- Lastpass
+- [url alias](https://addons.mozilla.org/en-US/firefox/addon/url-alias-8703/)
+- lastpass
 - firebug
-- ghostery
 - ad block
 - vimfx
-- push bullet
+- [GoogAlexa](https://addons.mozilla.org/en-US/firefox/addon/googalexa/)
 
 

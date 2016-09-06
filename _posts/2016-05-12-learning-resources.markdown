@@ -42,3 +42,7 @@ This page will act as a repository for all of my personal learning resources.
 ## CTF
 - [22 Hacking Sites, CTFs and Wargames To Practice Your Hacking Skills](https://hackerlists.com/hacking-sites/)
 
+## Practice Coding and Hacking (Gamified)
+- [Codingame](https://www.codingame.com/)
+- [Code Fights](https://codefights.com/home)
+- [Hacksplaining](https://www.hacksplaining.com)
