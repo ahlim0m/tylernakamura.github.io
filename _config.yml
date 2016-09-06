@@ -17,3 +17,6 @@ github_username:  tylernakamura
 # Build settings
 markdown: kramdown
 extensions: [fenced_code_blocks]
+
+# URL
+date: /:year/:month/:day/:title.html
