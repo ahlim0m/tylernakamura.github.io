@@ -19,4 +19,11 @@ markdown: kramdown
 extensions: [fenced_code_blocks]
 
 # URL
-date: /:year/:month/:day/:title.html
+date: /:year/:month/:day/:title
+
+# Specify permalinks for the various collections like pages and posts
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+  # pages:
