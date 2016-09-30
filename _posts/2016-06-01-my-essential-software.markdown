@@ -3,7 +3,6 @@ layout: post
 title: "My Essential Software"
 date: 2016-06-01 23:52
 comments: false
-published: false
 categories: My essential software best picks
 ---
 
@@ -14,7 +13,7 @@ The list I use to bring a new machine up to my dev environment
 ### Desktop Apps
 - Spotify
 - Anki
-- Mail Client
+- Thunderbird
 - Firefox
 - Virtual Box
 - iTerm2
@@ -36,6 +35,7 @@ The list I use to bring a new machine up to my dev environment
 - python
 - Java
 - geoip-bin
+- wavemon
 
 ### Firefox Extensions
 - [url alias](https://addons.mozilla.org/en-US/firefox/addon/url-alias-8703/)
@@ -44,5 +44,4 @@ The list I use to bring a new machine up to my dev environment
 - ad block
 - vimfx
 - [GoogAlexa](https://addons.mozilla.org/en-US/firefox/addon/googalexa/)
-
 
