@@ -46,3 +46,5 @@ This page will act as a repository for all of my personal learning resources.
 - [Codingame](https://www.codingame.com/)
 - [Code Fights](https://codefights.com/home)
 - [Hacksplaining](https://www.hacksplaining.com)
+
+[Google Tech Career Guide](g.co/techdevguide)
