@@ -8,9 +8,7 @@ categories: My essential software best picks
 
 ## Software I Need
 
-The list I use to bring a new machine up to my dev environment
-
-### Desktop Apps
+### Apps
 - Spotify
 - Anki
 - Thunderbird
@@ -36,12 +34,20 @@ The list I use to bring a new machine up to my dev environment
 - Java
 - geoip-bin
 - wavemon
+- youtube-dl
+- rclone
 
 ### Firefox Extensions
 - [url alias](https://addons.mozilla.org/en-US/firefox/addon/url-alias-8703/)
 - lastpass
 - firebug
-- ad block
+- ad guard
 - vimfx
 - [GoogAlexa](https://addons.mozilla.org/en-US/firefox/addon/googalexa/)
+
+### vlsub
+vlc extension that searches movies by hash and downloads subtitles from opensubtitles.org
+[Official Repo](https://github.com/exebetche/vlsub)
+[How to Install on Ubuntu 14](http://ubuntuhandbook.org/index.php/2015/02/upgrade-vlc-2-2-0-stable-ubuntu-14-04/)
+
 
