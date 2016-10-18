@@ -21,6 +21,8 @@ categories: My essential software best picks
 - Dash (Mac) - Offline Documentation
 - Virtual Box
 - Textual (IRC)
+- OBS
+ - file save path: /path/to/desktop/$T.mp4
 
 ### CLI
 - vagrant
