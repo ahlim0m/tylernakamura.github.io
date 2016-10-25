@@ -29,7 +29,13 @@ Example:
 - avi
 
 
+### ipv4 address
+```bash
+^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}↵
+(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
+```
+[source](https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9780596802837/ch07s16.html)
 
-## Cheat Sheets: 
+## Cheat Sheets:
 
 - [cheatography.com](https://www.cheatography.com/davechild/cheat-sheets/regular-expressions/)

@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "My Personal Learning Resources"
+title: "Learning Resources"
 date: 2016-05-12 12:58
 comments: false
 categories: personal learning resources
 ---
-
-This page will act as a repository for all of my personal learning resources.
 
 ## Crawlers, Scrapers and Bots
 - [Defcon 21 - How my Botnet Purchased Millions of Dollars in Cars and Defeated the Russian Hackers](https://www.youtube.com/watch?v=sgz5dutPF8M)
@@ -25,9 +23,7 @@ This page will act as a repository for all of my personal learning resources.
 ## Openstack
 - [Introduction to Openstack (Youtube Video) Next Day Video - Sandy Walsh](https://www.youtube.com/watch?v=bCsw2kkIWyw)
 - [A Beginners Guide to Learning Openstack](https://opensource.com/business/14/2/openstack-beginners-guide)
-
-## Rally
-- [Official Documentation](http://rally.readthedocs.io/en/latest/tutorial/step_5_task_templates.html)
+- [Rally Official Documentation](http://rally.readthedocs.io/en/latest/tutorial/step_5_task_templates.html)
 - [Youtube - Verifying your openstack cloud with tempest and cloud - openstack foundation - talk](https://www.youtube.com/watch?v=B6S3RFjzMWk)
 
 ## Networking
@@ -39,12 +35,14 @@ This page will act as a repository for all of my personal learning resources.
 ## Python
 - [Python Entry Points - Chris Warrick](https://www.chriswarrick.com/blog/2014/09/15/python-apps-the-right-way-entry_points-and-scripts/)
 
-## CTF
+## Security
 - [22 Hacking Sites, CTFs and Wargames To Practice Your Hacking Skills](https://hackerlists.com/hacking-sites/)
-
-## Practice Coding and Hacking (Gamified)
-- [Codingame](https://www.codingame.com/)
-- [Code Fights](https://codefights.com/home)
+- [Opensecuritytraining.info](http://opensecuritytraining.info/)
 - [Hacksplaining](https://www.hacksplaining.com)
 
-[Google Tech Career Guide](g.co/techdevguide)
+## Practice Coding and Hacking
+- [Codingame](https://www.codingame.com/)
+- [Code Fights](https://codefights.com/home)
+
+## Career and Job Preparation
+- [Google Tech Career Guide](g.co/techdevguide)
