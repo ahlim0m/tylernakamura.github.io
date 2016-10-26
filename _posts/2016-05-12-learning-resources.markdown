@@ -1,4 +1,4 @@
----
+  ---
 layout: post
 title: "Learning Resources"
 date: 2016-05-12 12:58
@@ -39,6 +39,7 @@ categories: personal learning resources
 - [22 Hacking Sites, CTFs and Wargames To Practice Your Hacking Skills](https://hackerlists.com/hacking-sites/)
 - [Opensecuritytraining.info](http://opensecuritytraining.info/)
 - [Hacksplaining](https://www.hacksplaining.com)
+- [Cybrary.it](https://www.cybrary.it/)
 
 ## Practice Coding and Hacking
 - [Codingame](https://www.codingame.com/)
@@ -46,3 +47,9 @@ categories: personal learning resources
 
 ## Career and Job Preparation
 - [Google Tech Career Guide](g.co/techdevguide)
+
+## FreeNas
+- [Downloadable Dox for Freenas 9](http://freenas.2trux.com/)
+
+## Ansible
+- [Awesome Ansible on Github](https://github.com/jdauphant/awesome-ansible)
