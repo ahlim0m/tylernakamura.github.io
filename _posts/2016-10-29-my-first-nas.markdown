@@ -7,6 +7,7 @@ published: True
 categories: nas freenas freenas10 freenas9 esxi cloud home server lab
 ---
 
+
 # POST IS CURRENTLY UNFINISHED - WORK IN PROGRESS - 2016-11-04
 
 To build a NAS for myself, I had a few important goals in mind:
