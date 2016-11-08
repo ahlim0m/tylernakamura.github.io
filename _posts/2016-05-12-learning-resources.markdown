@@ -1,4 +1,4 @@
-  ---
+---
 layout: post
 title: "Learning Resources"
 date: 2016-05-12 12:58
@@ -18,7 +18,7 @@ categories: personal learning resources
 ## Linux
 - [Linux Journey - A site for learning about Linux](https://linuxjourney.com/)
 - [A Linux Server Administration Tutorial for Beginners by Peter Dalmaris](https://speakerdeck.com/futureshocked/a-linux-server-administration-tutorial-for-beginners)
-- [Linux Free || Die Hard - darakian](https://github.com/darakian/Presentations)
+- [Linux Free \|\| Die Hard - darakian](https://github.com/darakian/Presentations)
 
 ## Openstack
 - [Introduction to Openstack (Youtube Video) Next Day Video - Sandy Walsh](https://www.youtube.com/watch?v=bCsw2kkIWyw)
