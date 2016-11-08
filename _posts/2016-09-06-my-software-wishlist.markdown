@@ -11,6 +11,9 @@ Below is a list of products I want, or changed/new features in existing products
 ### Lastpass
 - Have the ability to choose priority of auto fill when you have multiple accounts for a single URL (currently alphabetical or order added priority)
 
+### Iterm2
+- ~~When splitting a window or making a new tab, the new window or tab would already be on the working directory.~~ [**WISH GRANTED**](https://coderwall.com/p/9xo7aq/open-up-iterm2-splits-in-current-working-directory)
+
 ### MacOS
 - cmd + tab needs to be faster. I have no idea why its so slow.
 
