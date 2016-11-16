@@ -16,6 +16,7 @@ Below is a list of products I want, or changed/new features in existing products
 
 ### macOS
 - cmd + tab needs to be faster. I have no idea why its so slow.
+- contacts: adding to and from "groups" is horrible in its current state
 
 ### OBS
 - Default value for container recording should be mp4 or matroska NOT flv
