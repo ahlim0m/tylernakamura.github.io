@@ -4,7 +4,7 @@ title: "Building my Home Server (NAS)"
 date: 2016-11-04 10:01
 comments: false
 published: True
-categories: nas freenas freenas10 freenas9 esxi cloud home server lab
+categories: nas freenas freenas10 freenas9 esxi cloud home server lab ubuntu
 ---
 
 
@@ -19,7 +19,6 @@ To build a NAS for myself, I had a few important goals in mind:
 
 ## My Software
 
-### FreeNas9
 FreeNas felt like the obvious choice for my OS solution as it is ubiqitous and seemed the have the enterprise scaling capabilities. After a little research I saw that FreeNas10 was in the works. I saw the [State of the Union videos](https://www.youtube.com/watch?v=FzyMAGbp6_g) and fell in love with the UI. I also really like their move to incorporate a hypervisor and Docker support.
 
 My goal was to have some kind of hypervisor available in the local network so I at first thought I could run ESXI and then virtualize FreeNas10. I realize that this may be foolish considering the FreeNas10 is not even out of beta, and I was virtualizing a hypervisor. I did actually get it to work after a lot of trial, but I found that a few things didn't work.
@@ -43,5 +42,9 @@ Reasons for FreeNas10 back to FreeNas9:
 Don't get me wrong. FreeNas10 is freaking awesome, and I am so excited for the official release, but they are little farther away from official release than I thought they were.
 
 At this point, I am just going to keep my hyper visor in the AWS cloud, and just have my NAS box for NAS.
+
+2016-11-17 Update:
+
+Going with Ubuntu 16 now for a my NAS. I don't need all the features that FreeNas9 has and I would prefer to change stuff over the command line. There were just a few more things that I needed my box to do than NAS and I am not comfortable enough to leave the Debian based CLI.
 
 ## My Hardware
