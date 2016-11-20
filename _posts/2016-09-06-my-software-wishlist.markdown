@@ -28,6 +28,9 @@ In game recording/streaming should also record voices in group party
 - Set up notifications to see changes for specific files or directories
   - ie, I may not want to get notified for all changes to a project but perhaps only to certain files
 
+### rTorrent
+- throttle torrents after a certain bandwidth cap
+
 ### Anki
 - Without addons or plugins, change the import delimitter from card to card (can already change the delimitter from front to back)
 
