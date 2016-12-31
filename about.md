@@ -8,10 +8,8 @@ A developer striving to automate everything.
 
 Personal Links:
 
-- [Hackerrank](https://www.hackerrank.com/gunderson)
 - [LinkedIn](https://linkedin.com/in/tylernakamura)
 - [Github](https://github.com/tylernakamura)
-- [Stack Overflow](http://stackoverflow.com/users/story/4143925)
 - [Website](http://tylernakamura.com)
 - [Youtube](https://www.youtube.com/channel/UCfj5hXxhXWTnJEbI94p_dkg)
 
