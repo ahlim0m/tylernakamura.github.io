@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Snippet"
+date: 2016-05-02 12:48
+comments: false
+---
+
+http://unix.stackexchange.com/questions/10589/how-can-i-swap-my-two-screens-left-to-right
+
+Will place the HDMI output to be the left of the DVI output.
+Useful for reorganizing screens from the command line
+
+```
+xrandr --output HDMI-0 --left-of DVI-I-0
+```
