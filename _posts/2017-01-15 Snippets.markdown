@@ -13,3 +13,14 @@ Useful for reorganizing screens from the command line
 ```
 xrandr --output HDMI-0 --left-of DVI-I-0
 ```
+
+
+---
+
+Converting AVI to MP4
+
+```
+avconv -i test.avi -c:v libx264 -c:a copy outputfile.mp4
+```
+
+[source](http://askubuntu.com/questions/370786/how-to-convert-avi-xvid-to-mkv-or-mp4-h264)
