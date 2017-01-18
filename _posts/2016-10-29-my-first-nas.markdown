@@ -7,7 +7,6 @@ published: True
 categories: nas freenas freenas10 freenas9 esxi cloud home server lab ubuntu
 ---
 
-
 # POST IS CURRENTLY UNFINISHED - WORK IN PROGRESS - 2016-11-04
 
 To build a NAS for myself, I had a few important goals in mind:
@@ -41,10 +40,14 @@ Reasons for FreeNas10 back to FreeNas9:
 
 Don't get me wrong. FreeNas10 is freaking awesome, and I am so excited for the official release, but they are little farther away from official release than I thought they were.
 
-At this point, I am just going to keep my hyper visor in the AWS cloud, and just have my NAS box for NAS.
+2017-01-17 Update:
 
-2016-11-17 Update:
-
-Going with Ubuntu 16 now for a my NAS. I don't need all the features that FreeNas9 has and I would prefer to change stuff over the command line. There were just a few more things that I needed my box to do than NAS and I am not comfortable enough to leave the Debian based CLI.
+I once again changed my mind about the OS of the NAS, but this time I feel fairly confident in my decision.
+Now I am just running Ubuntu Xenial with a Samba server set up. I don't need all the features that FreeNas9 has and I would prefer to change stuff over the command line.
+There were just a few more things that I needed my box to do than NAS and I am not comfortable enough to leave the Debian based distro.
+For example, If I wanted to have a cloud based hypervisor, I would have to open a port on my private network to let my cloud instances in.
+Poking a hole in my network is not something I am willing to do especially considering that I don't have a static IP.
 
 ## My Hardware
+
+As is common with most home NAS setups, my hardware consists of parts that I have lying around from previous builds.
