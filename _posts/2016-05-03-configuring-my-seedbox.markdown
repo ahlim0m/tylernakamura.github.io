@@ -5,9 +5,10 @@ date: 2016-05-03 12:41
 comments: false
 categories: seedbox vps rtorrent screen
 ---
-Below is a guide and a tale of my efforts in creating an almost completely autonomous seedbox:
+Below is a guide and a tale of my efforts in creating an seedbox:
 
 ### Selecting a Virtual Private Server Service
+
 I chose to go with a VPS from [Dediseedbox.com](http://dediseedbox.com/). The fact that they are built towards seeding made me choose them as my provider. Compare [their rates](http://dediseedbox.com/vps.html) to another popular provider like [Digital Ocean](https://www.digitalocean.com/pricing/). Having servers located outside of the US can also be advantageous for a variety of other reasons.
 
 I was pretty satisfied with the speeds, especially considering the location. For myself, the speeds exceed sufficiency.
@@ -15,16 +16,16 @@ I was pretty satisfied with the speeds, especially considering the location. For
 <img src="/images/speedtests.png"/>
 
 ### Setting up SSH Keys
+
 SSH keys can allow a client to SSH into a VPS without the use of a password. When configuring a VPS, you may need to log into your server often.
 Setting up keys can help speed up this process. SSH keys can also enhance security if you choose to still use a password.
 SSH keys aren't required but can be very convenient.
 For more information, [Digital Ocean has an excellent basic guide for setting up SSH keys.](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 
-For maximum laziness and brownie points, set up a bash alias that allows you to type in a word to SSH into your VPS.
-For example, when I type:
+For maximum laziness and brownie points, look into creating an object in your ~/.ssh/config that defines a certain ssh connection so that you can connect like so:
 
 ```bash
-go-to-holland
+ssh france
 ```
 
 my bash alias automatically logs me into the VPS; all done securely without the use of a password.
@@ -42,6 +43,7 @@ My apt-get installation for didn't seem to include a copy of the **rtorrent.rc**
 
 ```bash
 wget https://raw.githubusercontent.com/rakshasa/rtorrent/master/doc/rtorrent.rc
+mv rtorrent.rc ~/.rtorrent.rc
 ```
 Save the downloaded config file in the home directory of the user that will be running rTorrent.
 
@@ -79,7 +81,7 @@ There are many other options for customization, be sure to check out the Arch Wi
  Opening rTorrent via **screen** will allow you to detach and reattach from a running screen:
 
 ```bash
-screen rtorrent
+screen -S "rtorrent" rtorrent
 ```
 
 Pressing ctr+a, then ctrl+d will detach from the screen while leaving the process running.
@@ -90,10 +92,10 @@ To list all of the screens for a user, run the following command as that user[(s
 screen -ls
 ```
 
-To reattach to a screen:
+To reattach to a screen with the name of rtorrent:
 
 ```bash
-screen -r
+screen -r rtorrent
 ```
 
 ### Converting Magnet Links to .torrent Files
