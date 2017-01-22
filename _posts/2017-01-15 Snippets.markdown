@@ -24,3 +24,14 @@ avconv -i test.avi -c:v libx264 -c:a copy outputfile.mp4
 ```
 
 [source](http://askubuntu.com/questions/370786/how-to-convert-avi-xvid-to-mkv-or-mp4-h264)
+
+
+---
+
+Converting pdf to mobi
+
+```
+ebook-converter document.pdf .mobi
+```
+
+[source](askubuntu.com/questions/39180/pdf-to-mobi-convertor)
