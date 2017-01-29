@@ -3,7 +3,7 @@ layout: post
 title: "Useful Regular Expressions"
 date: 2016-08-02 13:49
 comments: false
-categories: Regex useful
+categories: Regex regular expression
 ---
 
 Just saving some RegEx that I use :D
@@ -41,8 +41,3 @@ Example:
 https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
 ```
 [source](http://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url)
-
-
-## Cheat Sheets:
-
-- [cheatography.com](https://www.cheatography.com/davechild/cheat-sheets/regular-expressions/)
