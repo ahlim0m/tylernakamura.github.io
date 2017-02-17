@@ -37,6 +37,9 @@ Below is a list of products I want, or changed/new features in existing products
 ### New Product Ideas
 - A script that can convert wikipedia pages (or any text) into flashcards based on sentence structure regex matches (probably takes some AI work here)
 
+### Phones
+- Putting in a different screen unlock password will take the user into a faulty operating system.
+
 ---
 
 - Custom TV - a database for all video files. Video players randomly iterates through your videos and based on your criteria plays the videos.
