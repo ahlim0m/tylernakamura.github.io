@@ -18,6 +18,7 @@ Causes I Support:
 - [Electronic Frontier Foundation (EFF)](https://www.eff.org/)
 - [Free Software Foundation](https://www.fsf.org/)
 - [The Linux Foundation](https://www.linuxfoundation.org/)
+- [Internet Archive](https://archive.org/)
 
 Noteworthy Links:
 
