@@ -20,6 +20,7 @@ Below is a list of products I want, or changed/new features in existing products
 ### macOS
 - cmd + tab needs to be faster. I have no idea why its so slow.
 - contacts: adding to and from "groups" is horrible in its current state
+- imessage: photos should be built into imessage just like iOS messages. Currently I have to open photo booth to take a photo from my computer and move that photo over to imessage to send it.
 
 ### OBS Studio
 - Default value for container recording should be mp4 or matroska NOT flv
