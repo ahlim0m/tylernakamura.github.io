@@ -70,7 +70,7 @@ When a .torrent file is found in this directory, rtorrent (if running) will take
 
 ```bash
 # Watch a directory for new torrents, and stop those that have been deleted
-schedule = watch_directory,5,5,load.start=/home/user/path/to/watch/directory
+schedule = watch_directory,5,5,load.start=/home/user/path/to/watch/directory/*.torrent
 schedule = untied_directory,5,5,stop_untied=
 ```
 
