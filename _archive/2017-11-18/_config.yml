@@ -1,0 +1,29 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Tyler Nakamura
+email: tyler.c.nakamura@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+    "Given enough eyeballs, all bugs are shallow"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "tylernakamura.com" # the base hostname & protocol for your site
+github_username:  tylernakamura
+
+# Build settings
+markdown: kramdown
+extensions: [fenced_code_blocks]
+
+# URL
+date: /:year/:month/:day/:title
+
+# Specify permalinks for the various collections like pages and posts
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+  # pages:
